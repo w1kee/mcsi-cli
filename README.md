@@ -12,6 +12,10 @@ mcsi-cli is a command line tool for getting information about minecraft servers 
 
 if you want to contribute to this project or fix my noob go code, be my guest. i started learning go only a few days ago, so i'm probably doing some beginner errors
 
+## Credits
+- [Anders G. Jørgensen](https://spirit55555.dk/) for making [mcsrvstat.us](https://mcsrvstat.us/) which provides the api
+- [w1ke](https://w1ke.cz/)
+ for making the cli
 ## License
 
 this program is licensed under the mit license, so it's open source
