@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"github.com/fatih/color"
+	mcsi "github.com/w1kee/mcsi-lib"
 )
 
 func main() {
@@ -14,7 +15,7 @@ func main() {
 		os.Exit(0)
 	}
 
-	status, err := getInfo((*args).Url)
+	status, err := mcsi.GetInfo((*args).Url)
 	if err != nil {
 		color.Red(fmt.Sprintf("error: %s", err.Error()))
 		os.Exit(1)
