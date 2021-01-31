@@ -6,6 +6,7 @@ import (
 	"os"
 
 	"github.com/fatih/color"
+	mcsi "github.com/w1kee/mcsi-lib"
 )
 
 var logo string = fmt.Sprintf(`
@@ -86,7 +87,7 @@ func displayMOTD(motd []string) {
 	}
 }
 
-func simpleDisplay(status Status) error {
+func simpleDisplay(status mcsi.Status) error {
 	//print out basic information
 	//motd
 	color.Yellow("MOTD:")
@@ -104,7 +105,7 @@ func simpleDisplay(status Status) error {
 	return nil
 }
 
-func complexDisplay(status Status) error {
+func complexDisplay(status mcsi.Status) error {
 	niceJSON, err := json.MarshalIndent(status, "", "    ")
 	if err != nil {
 		return fmt.Errorf("error: complexDisplay: %v", err)
